@@ -18,10 +18,10 @@ class OrderPageLocators:
     BLACK_SCOOTER = [By.ID, 'black'] #чекбокс черный цвет
     GREY_SCOOTER = [By.ID, 'grey'] #чекбокс серый цвет
     COMMENT = [By.XPATH, '//input[@placeholder ="Комментарий для курьера"]'] #поле коммент
-    ORDER_BUTTON = [By.XPATH, '//button[@class = "Button_Button__ra12g Button_Middle__1CSJM"])[1]'] #кнопка заказать в форме
-    CONFIRM_ORDER_BUTTON = [By.XPATH, '//button[@class = "Button_Button__ra12g Button_Middle__1CSJM"])[2]'] #кнопка подтвердить
+    ORDER_BUTTON = [By.XPATH, '//button[@class="Button_Button__ra12g Button_Middle__1CSJM" and text()="Заказать"]'] #кнопка заказать в форме
+    CONFIRM_ORDER_BUTTON = [By.XPATH, '//button[@class="Button_Button__ra12g Button_Middle__1CSJM" and text()="Да"]'] #кнопка подтвердить
     SUCCESS_ORDER_MESSAGE_FORM = [By.XPATH, '//div[@class ="Order_Modal__YZ-d3"]']  # окно с сообщением об успешном заказе
-    CHECK_STATUS_BUTTON = [By.XPATH, '//button[@class = "Button_Button__ra12g Button_Middle__1CSJM"])[2]'] #кнопка посмотреть статус
+    CHECK_STATUS_BUTTON = [By.XPATH, '//button[@class="Button_Button__ra12g Button_Middle__1CSJM" and text()="Посмотреть статус"]'] #кнопка посмотреть статус
 
     SAMOKAT_LOGO_BUTTON = [By.CLASS_NAME, 'Header_LogoScooter__3lsAR'] #кнопка логотипа самоката
     YA_LOGO_BUTTON = [By.CLASS_NAME, 'Header_LogoYandex__3TSOI'] #кнопка логотипа яндекса
@@ -33,7 +33,7 @@ class OrderPageLocators:
 
     @staticmethod
     def choose_rent_duration(duration):
-        return By.XPATH, f'//div[@class="Dropdown-option" and contains(text(), {duration})]'
+        return By.XPATH, f'(//div[@class="Dropdown-option"])[{duration}]'
 
     @staticmethod
     def choose_colour(colour):

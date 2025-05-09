@@ -14,4 +14,3 @@ class TestOrderScooter:
         order_samokat.fill_second_form_fields(date_day, duration, colour, comment)
         order_samokat.accept_order()
         assert order_samokat.get_success_order_message() == data.Data.success_order_message, 'Не удалось получить сообщение об успешном заказе'
-
