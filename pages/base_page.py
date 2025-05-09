@@ -41,5 +41,3 @@ class BasePage:
     def switch_and_get_url(self, timeout=40):
         WebDriverWait(self.driver, timeout).until(EC.number_of_windows_to_be(2))
         self.driver.switch_to.window(self.driver.window_handles[-1])
-
-

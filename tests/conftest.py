@@ -7,7 +7,6 @@ from pages.main_page import MainPage
 from urls import main_site
 
 
-
 @pytest.fixture(scope="function")
 def driver():
     options = Options()

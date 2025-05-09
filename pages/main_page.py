@@ -9,7 +9,6 @@ class MainPage(BasePage):
     def accept_cookies(self):
         self.click_on_element(MainPageLocators.ACCEPT_COKIES_BUTTON)
 
-
     @allure.step("Кликнуть на Заказать в шапке")
     def click_header_order_button(self):
         self.click_on_element(MainPageLocators.HEADER_ORDER_BUTTON)

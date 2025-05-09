@@ -20,6 +20,3 @@ class Data:
     ]
 
     success_order_message = 'Заказ оформлен'
-
-
-
